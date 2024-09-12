@@ -41,14 +41,10 @@ jobs:
 
       - name: Change wrapper permissions
         run: chmod +x ./gradlew
-
-      # Run Tests Build
-      - name: Run gradle tests
-        run: ./gradlew test
-
+        
       # Run Build Project
       - name: Build gradle project
-        run: ./gradlew build
+        run: ./gradlew build assembly
 
       # Create APK Debug
       - name: Build apk debug project (APK) - ${{ env.main_project_module }} module
